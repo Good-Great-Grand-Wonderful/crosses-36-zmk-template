@@ -1,0 +1,6 @@
+/ {
+};
+
+&apds9960 {
+    status = "disabled";
+};
