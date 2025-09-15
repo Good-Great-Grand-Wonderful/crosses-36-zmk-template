@@ -15,9 +15,9 @@
   status = "okay";
 };
 
-/* ZMK v0.3.0: Peripheral input-split requires an 'input' property pointing to the source device */
+/* ZMK v0.3.0: Peripheral input-split requires a 'device' property pointing to the source device */
 &trackball_peripheral_split {
-  input = <&trackball_central>;
+  device = <&trackball_central>;
 };
 
 &spi0 {

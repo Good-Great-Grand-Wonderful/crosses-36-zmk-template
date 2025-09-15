@@ -5,6 +5,7 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
+        zmk,matrix-transform = &default_transform;
     };
 
     /* Mock kscan since the dongle has no keys */
