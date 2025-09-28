@@ -6,6 +6,8 @@ url: https://github.com/Good-Great-Grand-Wonderful/crosses
 requires: [nice_nano_v2]
 features:
   - keys
+  - display
+  - studio
 siblings:
   - crosses_left
   - crosses_right
