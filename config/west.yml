@@ -10,7 +10,7 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: gggw-zmk-keyboards
+    - name: gggw-zmk-keebs
       remote: Good-Great-Grand-Wonderful
       revision: main
       import: config/west.yml
