@@ -1,0 +1,218 @@
+draw_config:
+  append_colon_to_layer_header: false
+  draw_key_sides: true
+
+  svg_extra_style: |
+    svg.keymap {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      font-weight: bold;
+    }
+ 
+    text.label {
+      stroke: #dfdfde;
+      stroke-width: 12;
+      stroke-linejoin: round;
+    }
+
+    rect.combo, rect.combo-separate {
+      opacity: 0.95;
+      stroke: #c9cccf;
+      stroke-width: 0.5;
+      fill: #d7eaed;
+    }
+    path.combo {
+      stroke-dasharray: 4, 4;
+      stroke-opacity: 0.3;
+    }
+
+    rect.held, rect.combo.held {
+      fill: #ebdada;
+    }
+
+    .trans.tap, .ghost.tap {
+      opacity: 0.5;
+    }
+
+    .shifted {
+      translate: -9px 3px;
+      opacity: 0.3;
+    }
+
+    .toggle.shifted {
+      translate: -12px 17px;
+      opacity: 1.0;
+    }
+    .toggle.hold {
+      translate: 12px -25px;
+    }
+
+    .text_with_symbol.tap {
+      translate: -1px 1px;
+    }
+    .text_with_symbol.shifted {
+      translate: 8px 13px;
+      font-size: 8px;
+      opacity: 1.0;
+    } 
+
+    .combo.text_with_symbol.tap {
+      translate: -1px 1px;
+    }
+    .combo.text_with_symbol.shifted {
+      translate: 7px 5px;
+      font-size: 8px;
+      opacity: 1.0;
+    }
+  glyph_tap_size: 22 
+  glyph_hold_size: 16
+  glyph_shifted_size: 16
+  glyphs: {}
+parse_config:
+  preprocess: true
+  skip_binding_parsing: false
+  raw_binding_map:
+    "&none":
+      tap: $$mdi:minus-circle-outline$$
+      type: none
+    "&bt BT_SEL 0":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 1
+    "&bt BT_SEL 1":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 2
+    "&bt BT_SEL 2":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 3
+    "&bt BT_SEL 3":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 4
+    "&bt BT_SEL 4":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 5
+    "&mkp LCLK":
+      tap: $$mdi:mouse-left-click$$
+      hold: "left"
+    "&mkp MCLK":
+      tap: $$mdi:mouse$$
+      hold: "middle"
+    "&mkp RCLK":
+      tap: $$mdi:mouse-right-click$$
+      hold: "right"
+  sticky_label: $$mdi:gesture-tap-hold$$
+  toggle_label: toggle
+  tap_toggle_label: tap-toggle
+  trans_legend:
+    tap: $$mdi:transfer$$
+    type: trans
+  layer_legend_map: {}
+  mark_alternate_layer_activators: true
+  modifier_fn_map:
+    left_ctrl: Ctl
+    right_ctrl: Ctl
+    left_shift: $$mdi:apple-keyboard-shift$$
+    right_shift: $$mdi:apple-keyboard-shift$$
+    left_alt: Alt
+    right_alt: AltGr
+    left_gui: Gui
+    right_gui: Gui
+    keycode_combiner: '{mods}+{key}'
+    mod_combiner: '{mod_1}+{mod_2}'
+    special_combinations: {}
+  zmk_remove_keycode_prefix: []
+  zmk_keycode_map:
+    EXCLAMATION: '!'
+    EXCL: '!'
+    AT_SIGN: '@'
+    AT: '@'
+    HASH: '#'
+    POUND: '#'
+    DOLLAR: $
+    DLLR: $
+    PERCENT: '%'
+    PRCNT: '%'
+    CARET: ^
+    AMPERSAND: '&'
+    AMPS: '&'
+    ASTERISK: '*'
+    ASTRK: '*'
+    STAR: '*'
+    LEFT_PARENTHESIS: (
+    LPAR: (
+    RIGHT_PARENTHESIS: )
+    RET: $$mdi:keyboard-return$$
+    RPAR: )
+    EQUAL: '='
+    PLUS: +
+    MINUS: '-'
+    UNDERSCORE: _
+    UNDER: _
+    SLASH: /
+    FSLH: /
+    QUESTION: '?'
+    QMARK: '?'
+    BACKSLASH: \
+    BSLH: \
+    PIPE: '|'
+    NON_US_BACKSLASH: \
+    PIPE2: '|'
+    NON_US_BSLH: '|'
+    SEMICOLON: ;
+    SEMI: ;
+    COLON: ':'
+    SINGLE_QUOTE: ''''
+    SQT: ''''
+    APOSTROPHE: ''''
+    APOS: ''''
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+    COMMA: ','
+    LESS_THAN: <
+    LT: <
+    PERIOD: .
+    DOT: .
+    GREATER_THAN: '>'
+    GT: '>'
+    LEFT_BRACKET: '['
+    LBKT: '['
+    LEFT_BRACE: '{'
+    LBRC: '{'
+    RIGHT_BRACKET: ']'
+    RBKT: ']'
+    RIGHT_BRACE: '}'
+    RBRC: '}'
+    GRAVE: '`'
+    TILDE: '~'
+    NON_US_HASH: '#'
+    NUHS: '#'
+    TILDE2: '~'
+    ESC: $$mdi:keyboard-esc$$
+    TAB: $$mdi:keyboard-tab$$
+    SPACE: $$mdi:keyboard-space$$
+    BSPC: $$mdi:backspace$$
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LALT: $$mdi:apple-keyboard-option$$
+    LSHIFT: $$mdi:apple-keyboard-shift$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    LCMD: $$mdi:apple-keyboard-command$$
+    RCTRL: $$mdi:apple-keyboard-control$$
+    RALT: $$mdi:apple-keyboard-option$$
+    RSHIFT: $$mdi:apple-keyboard-shift$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    RCMD: $$mdi:apple-keyboard-command$$
+    UP: $$mdi:arrow-up-bold$$
+    DOWN: $$mdi:arrow-down-bold$$
+    LEFT: $$mdi:arrow-left-bold$$
+    RIGHT: $$mdi:arrow-right-bold$$
+    PG_UP: $$mdi:transfer-up$$
+    PG_DN: $$mdi:transfer-down$$
+    BT_CLR: $$mdi:bluetooth-off$$
+    BT_SEL: $$mdi:bluetooth-connect$$
+  zmk_combos: {}
+  zmk_preamble: '#define KEYMAP_DRAWER'
+  zmk_additional_includes: []
