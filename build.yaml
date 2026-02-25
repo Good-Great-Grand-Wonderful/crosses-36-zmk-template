@@ -8,3 +8,14 @@ include:
     artifact-name: crosses_36_right
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: nice_nano
+    shield: crosses_left
+    artifact-name: crosses_36_left_internal_osc
+    cmake-args: -DCONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
+  - board: nice_nano
+    shield: crosses_right
+    artifact-name: crosses_36_right_internal_osc
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
+  - board: nice_nano
+    shield: settings_reset
