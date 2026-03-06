@@ -112,7 +112,7 @@ layers:
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
+    - '&studio_unlock'
   - - {t: '$$mdi:transfer$$', type: trans}
     - {t: '$$mdi:mouse-right-click$$', h: right}
     - {t: '$$mdi:mouse$$', h: middle}
